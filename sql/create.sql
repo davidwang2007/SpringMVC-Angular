@@ -1,7 +1,7 @@
 #root login
-create database sale_cb default character set utf8 collate utf8_general_ci;
-create user 'sale_db_user'@'%' identified by 'sale_db_user_pass';
-grant all privileges on sale_cb.* to 'sale_db_user'@'%' with grant option;
+create database david_cb default character set utf8 collate utf8_general_ci;
+create user 'david_db_user'@'%' identified by 'sale_db_user_pass';
+grant all privileges on david_cb.* to 'sale_db_user'@'%' with grant option;
 
 create table user(
 	id integer primary key auto_increment comment '',
