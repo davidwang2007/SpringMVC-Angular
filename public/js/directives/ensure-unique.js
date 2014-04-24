@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sale.system').directive('ensureUnique',['$http',function($http){
+angular.module('david.system').directive('ensureUnique',['$http',function($http){
 	return {
 		restrict: 'A',
 		require: 'ngModel',

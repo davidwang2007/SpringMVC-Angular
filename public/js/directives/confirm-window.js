@@ -9,7 +9,7 @@
  * conditions of the MIT license, available at http://www.opensource.org/licenses/mit-license.php
  * */
 'use strict';
-angular.module('sale.base')
+angular.module('david.base')
 	.factory('confirm',['$rootScope','$timeout','$q',function($rootScope,$timeout,$q){
 		return function(type,msg){
 			msg || (msg = type,type = 'warn');

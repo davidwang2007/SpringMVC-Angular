@@ -5,7 +5,7 @@
  * */
 'use strict';
 
-angular.module('sale.office')
+angular.module('david.office')
 	.config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 		$stateProvider
 			/**office**/

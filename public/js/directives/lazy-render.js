@@ -8,7 +8,7 @@
  * @author D.W.
  */
 'use strict';
-angular.module('sale.system')
+angular.module('david.system')
 	.directive('lazyRender',['$timeout','pageSize','$injector',function($timeout,pageSize,$injector){
 		/***
 		 * 此处的topScope是指ng-repeat处用的controller中的scope

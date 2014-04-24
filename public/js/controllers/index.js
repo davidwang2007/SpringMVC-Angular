@@ -2,7 +2,7 @@
  * Index Controller
  */
 'use strict';
-angular.module('sale.system').controller('IndexController',['$scope','$http','toaster','confirm',
+angular.module('david.system').controller('IndexController',['$scope','$http','toaster','confirm',
     function($scope,$http,toaster,confirm){
 		$http.get('./test').success(function(data){
 			$scope.info = data;

@@ -4,7 +4,7 @@
  * @date 2014-4-23 11:20:39
  */
 'use strict';
-angular.module('sale.office')
+angular.module('david.office')
 	.factory('officeMenus',['$http','utils',function($http,utils){
 		var path = './office/menus';
 		var menus = $http.get(path).then(function(resp){

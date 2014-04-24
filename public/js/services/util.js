@@ -3,7 +3,7 @@
  * @author D.W.
  */
 'use strict';
-angular.module('sale.base')
+angular.module('david.base')
 	.factory('utils',['$log','$rootScope',function($log,$rootScope){
 		
 		//考虑到提示框时有可能单击回退与前进操作，这时候要取消

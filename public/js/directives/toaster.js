@@ -1,5 +1,5 @@
 /**
- * AngularJS Toaster for sale platform
+ * AngularJS Toaster for david platform
  * Version: 0.1
  *
  * Copyright 2014 D.W.  
@@ -10,7 +10,7 @@
  * @thanks to Jiri Kavulak
  */
 'use strict';
-angular.module('sale.base')
+angular.module('david.base')
 	.factory('toaster',['$rootScope',function($rootScope){
 		return {
 			/**

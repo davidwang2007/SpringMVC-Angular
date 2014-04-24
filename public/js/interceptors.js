@@ -2,7 +2,7 @@
  * 自定义过滤器
  * */
 'use strict';
-angular.module('sale.system').factory('interceptor401',['$q','$window','$timeout','pageSize',function($q,$window,$timeout,pageSize){
+angular.module('david.system').factory('interceptor401',['$q','$window','$timeout','pageSize',function($q,$window,$timeout,pageSize){
 	return {
 		'request': function(config){
 			if(config.params && config.params.needPage){

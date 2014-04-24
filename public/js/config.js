@@ -6,7 +6,7 @@ Date.prototype.toJSON = function(){
 };
 
 // Setting up route
-angular.module('sale').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
+angular.module('david').config(['$stateProvider','$urlRouterProvider',function($stateProvider,$urlRouterProvider){
 	// For unmatched routes:
 	$urlRouterProvider.otherwise('/');
 

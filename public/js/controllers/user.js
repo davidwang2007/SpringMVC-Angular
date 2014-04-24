@@ -1,7 +1,7 @@
 /**
  * 定义用户管理的相关Controller
  * */
-angular.module('sale.system')
+angular.module('david.system')
 	.controller('UserList',['$scope','$window','User','$timeout','toaster','confirm',function($scope,$window,User,$timeout,toaster,confirm){
 		$scope.users = User.query({needPage:true});
 		$scope.removeConfirm = function($index){

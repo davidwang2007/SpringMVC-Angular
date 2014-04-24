@@ -5,7 +5,7 @@
  * */
 'use strict';
 
-angular.module('sale.system').directive('smartFloat',function(){
+angular.module('david.system').directive('smartFloat',function(){
 	var FLOAT_REGEXP = /^\-?\d+((\.|\,)\d+)?$/;
 	return {
 		restrict: 'A',

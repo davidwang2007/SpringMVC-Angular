@@ -5,7 +5,7 @@
  * */
 'use strict';
 
-angular.module('sale.system').directive('keypressNone',function(){
+angular.module('david.system').directive('keypressNone',function(){
 	return {
 		restrict: 'A',
 		link: function(scope,element,attrs){

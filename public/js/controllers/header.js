@@ -1,5 +1,5 @@
 'use strict';
-angular.module('sale.system').controller('HeaderController',['$scope',function($scope){
+angular.module('david.system').controller('HeaderController',['$scope',function($scope){
 	
 	$scope.menu = [{
 		title:'首页',
