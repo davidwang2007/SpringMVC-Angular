@@ -18,9 +18,9 @@
 	http://www.springframework.org/schema/context/spring-context.xsd">
 	
 	<!-- 扫描类包，将标注Spring注解的类自动转化Bean,同时完成Bean的注入 -->
-	<context:component-scan base-package="com.hh.business.sale.web.dao"/>
+	<context:component-scan base-package="com.david.business.sale.web.dao"/>
 	<!-- 扫描service类包，应用Spring的注解配置 -->
-	<context:component-scan base-package="com.hh.business.sale.web.service"/>
+	<context:component-scan base-package="com.david.business.sale.web.service"/>
 	
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
