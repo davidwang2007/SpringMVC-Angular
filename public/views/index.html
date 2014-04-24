@@ -1,0 +1,18 @@
+
+<div>
+	<h1>首页</h1>
+	<div class="well" ng-cloak>
+		<dl class="dl-horizontal">
+			<dt>用户名:</dt>
+			<dd>{{info.user}}</dd>
+			<dt>IP:</dt>
+			<dd>{{info.ip}}</dd>
+			<dt>PORT:</dt>
+			<dd>{{info.port}}</dd>
+			<dt>Server IP:</dt>
+			<dd>{{info.remoteIp}}</dd>
+		</dl>
+	</div>
+	<button class="btn btn-primary" ng-click="makeToast()">Make Toast</button>
+	<button class="btn btn-primary" ng-click="makeConfirm()">Make Confirm</button>
+</div>

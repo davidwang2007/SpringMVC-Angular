@@ -1,0 +1,11 @@
+<!-- office home html edit by www 2014-4-23 -->
+<!-- 左侧是菜单  -->
+<div class="left-menu-container col-sm-2 well">
+	<ul class="nav nav-pills nav-stacked">
+		<li class="nav-header">菜单列表</li>
+		<li ng-repeat="menu in menus" ui-sref-active="active">
+			<a ui-sref="{{menu.state}}">{{menu.title}}</a>
+		</li>
+	</ul>
+</div>
+<div ui-view class="col-sm-10 slide"></div>

@@ -1,0 +1,39 @@
+<div class="alert alert-info" ng-show="message">{{message}}</div>
+<table class="table table-bordered table-striped table-hover text-center" ng-show="users && users.length">
+	<caption>
+		<h3>用户列表</h3>
+	</caption>
+	<tr>
+		<td>#</td>
+		<td>用户名</td>
+		<td>真实姓名</td>
+		<td>年龄</td>
+		<td>性别</td>
+		<td>住址</td>
+		<td>手机号码</td>
+		<td>创建时间</td>
+		<td>操作</td>
+	</tr>
+	<tr ng-repeat="user in users" lazy-render="User" query-param-generator="queryParamGenerator()">
+		<td>{{$index+1}}</td>
+		<td>{{user.username}}</td>
+		<td>{{user.realname}}</td>
+		<td>{{user.age}}</td>
+		<td>{{user.gender}}</td>
+		<td>{{user.address}}</td>
+		<td>{{user.phone}}</td>
+		<td>{{user.createDate | date:'yyyy年MM月dd日 HH时mm分ss秒'}}</td>
+		<td>
+			<a ui-sref="user-update({id:user.id})">更新</a>
+			<a href="" ng-click="removeConfirm($index)">删除</a>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="9">
+			<a ui-sref="user-create" class="">新增</a>
+		</td>
+	</tr>
+</table>
+<div class="alert alert-info ng-cloak" ng-hide="users && users.length">
+	当前系统没有用户,<a ui-sref="user-create">新增</a>一个吧
+</div>

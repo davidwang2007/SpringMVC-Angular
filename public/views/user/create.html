@@ -1,0 +1,122 @@
+<form name="form" class="form-horizontal" role="form" novalidate ng-submit="doCreate()">
+	<div class="row" ng-show="message">
+		<div class="col-sm-4 col-sm-offset-2 alert alert-danger">{{message}}</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">用户名:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" name="username" ng-model="user.username"
+				autocomplete="off" ng-minlength="2" ng-maxlength="20" placeholder="请输入用户名"
+				ng-required="true"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-warning" ng-show="form.username.$pristine && form.username.$error.required">
+				请输入用户名
+			</span>
+			<span class="label label-danger" ng-show="form.username.$error.minlength || form.username.$error.maxlength">
+				字符数目在2~20之间
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">密码:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="password" name="password" ng-model="user.password"
+				ng-minlength="6" ng-maxlength="50" placeholder="请输入密码"
+				ng-required="true"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-warning" ng-show="form.password.$pristine && form.password.$error.required">
+				请输入密码
+			</span>
+			<span class="label label-danger" ng-show="form.password.$error.minlength || form.password.$error.maxlength">
+				字符数目在6~50之间
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">真实名称:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" name="realname" ng-model="user.realname"
+				ng-minlength="2" ng-maxlength="10" placeholder="请输入真实名称"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-danger" ng-show="form.realname.$error.minlength || form.realname.$error.maxlength">
+				字符数目在2~10之间
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">年龄:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="number" name="age" ng-model="user.age"
+				min="10" max="100" placeholder="请输入年龄"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-warning" ng-show="form.age.$error.min || form.age.$error.max">
+				年龄需在10~100岁之间
+			</span>
+			<span class="label label-danger" ng-show="form.age.$error.number">
+				请输入数字格式
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">性别:</label>
+		<div class="col-sm-4">
+			<label class="radio-inline"><input type="radio" ng-model="user.gender" value="男"/>男</label>
+			<label class="radio-inline"><input type="radio" ng-model="user.gender" value="女" />女</label>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">EMAIL:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="email" name="email" ng-model="user.email" placeholder="请输入电子邮箱"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-danger" ng-show="form.email.$error.email">
+				请输入正确的电子邮箱
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">手机号码:</label>
+		<div class="col-sm-4">
+			<input class="form-control" smart-integer type="text" name="phone" ng-model="user.phone" placeholder="请输入手机号码"/>
+		</div>
+		<div class="col-sm-6">
+			<span class="label label-danger" ng-show="form.phone.$error.integer">
+				请输入正确的手机号码格式
+			</span>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">住址:</label>
+		<div class="col-sm-4">
+			<input class="form-control" type="text" name="address" ng-model="user.address" placeholder="请输入住址"/>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<label class="col-sm-2 control-label">备注:</label>
+		<div class="col-sm-4">
+			<textarea class="form-control" type="text" name="description" ng-model="user.description" placeholder="请输入备注"></textarea>
+		</div>
+	</div>
+	
+	<div class="form-group">
+		<div class="col-sm-4 col-sm-offset-2">
+			<input type="submit" value="提交" class="btn btn-success" ng-disabled="form.$invalid"/>
+			&nbsp;&nbsp;
+			<a ui-sref="user-list">返回</a>
+		</div>
+	</div>
+	
+</form>
